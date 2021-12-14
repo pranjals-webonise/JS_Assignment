@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <button onclick="Assignment3(1)"> NEWTAB </button>
+        <button onclick="Assignment3(2)"> CLOSETAB</button>
+        
+        <script>
+            let window_arr=[];
+            Assignment3 = (choice) => 
+            {
+                switch(choice) {
+                    case 1:
+                    for(let i=0;i<5;i++) {
+                        let op=window.open("https://www.google.co.in");
+                        window_arr.push(op);
+                    }
+                    setTimeout(closewin1,7000);
+                    break;
+
+                case 2:
+                    closewin1();
+                    break;
+                }
+            }
+            function closewin1() {
+                for (let i = 0; i < 5; i++){
+                    window_arr[i].close();
+                }
+            }
+        </script>                                                                                                           
+    </body>
+</html>

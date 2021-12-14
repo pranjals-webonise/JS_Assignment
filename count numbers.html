@@ -1,0 +1,42 @@
+<!Doctype html>
+<html>
+    <head>
+        <Title> FREQ OF ELEMENTS</Title>
+    </head>
+
+    
+        <h1>COUNT THE COMMA SEPRATED VALUES</h1>
+        <script>
+            
+
+            function no_of_element(array){
+                let a = [],
+                 b = [],
+                arr = [], 
+                var  prev;
+                arr.sort();
+    
+                for (let i=0;i<array.length;i++) {
+                    if (array[i] !== prev) {
+                    a.push(array[i]);
+                    b.push(1);
+                    }
+                    else {
+                        b[b.length-1]++;
+                    }
+                    prev = element;
+                }
+                for(let i=0;i<a.length;i++)
+                {
+                    document.write(`${a[i]} ':' ${b[i]}`);
+                }
+
+  
+            }
+            const arr = [1,2,3,3,4,5];
+
+            no_of_element(arr)
+
+        </script>
+    </body>
+</html>
